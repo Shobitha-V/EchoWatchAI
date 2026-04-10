@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoWatch AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Industrial Emission Monitoring System</p>
+        <h1>EcoWatch AI</h1>
+        <p class="hero-copy">Monitor AQI in a fictional demo zone, inspect dummy industrial contributors, forecast risk, and flag abnormal pollution spikes.</p>
+      </div>
+      <form id="locationForm" class="search-card">
+        <label for="locationInput">Location</label>
+        <div class="search-row">
+          <input id="locationInput" name="location" value="Residential Area" placeholder="Try School Zone or Market Colony" list="locationOptions" />
+          <datalist id="locationOptions">
+            <option value="Residential Area"></option>
+            <option value="School Zone"></option>
+            <option value="Market Colony"></option>
+            <option value="Riverside Homes"></option>
+            <option value="Workers Township"></option>
+          </datalist>
+          <button type="submit">Analyze</button>
+        </div>
+        <p class="input-hint">Use a suggested dummy location or type any custom demo-world location.</p>
+      </form>
+    </section>
+
+    <section class="metric-grid">
+      <article class="metric-card primary">
+        <span>Current AQI</span>
+        <strong id="currentAqi">--</strong>
+        <p id="aqiStatus">Loading...</p>
+      </article>
+      <article class="metric-card">
+        <span>Compliance</span>
+        <strong id="compliance">--</strong>
+        <p>AQI &gt; 200 warning, AQI &gt; 300 violation</p>
+      </article>
+      <article class="metric-card">
+        <span>AI Alert</span>
+        <strong id="anomalyState">--</strong>
+        <p id="anomalyMessage">Checking latest trend...</p>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel map-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Dummy World View</p>
+            <h2>Demo Zone Map</h2>
+          </div>
+          <div class="legend">
+            <span><i class="dot high"></i>High</span>
+            <span><i class="dot medium"></i>Medium</span>
+            <span><i class="dot low"></i>Low</span>
+          </div>
+        </div>
+        <div id="map"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-heading compact">
+          <div>
+            <p class="eyebrow">Nearby Sources</p>
+            <h2>Industries</h2>
+          </div>
+        </div>
+        <div id="industryList" class="industry-list"></div>
+      </article>
+    </section>
+
+    <section class="dashboard-grid lower">
+      <article class="panel chart-panel">
+        <div class="panel-heading compact">
+          <div>
+            <p class="eyebrow">Forecast</p>
+            <h2>Past + Predicted AQI</h2>
+          </div>
+        </div>
+        <canvas id="aqiChart"></canvas>
+      </article>
+
+      <article class="panel recommendations-panel">
+        <div class="panel-heading compact">
+          <div>
+            <p class="eyebrow">Action Plan</p>
+            <h2>Recommendations</h2>
+          </div>
+        </div>
+        <ul id="recommendations"></ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

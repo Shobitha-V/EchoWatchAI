@@ -1,0 +1,83 @@
+﻿{
+  "residentialAreas": [
+    {
+      "name": "Residential Area",
+      "zoneX": 48,
+      "zoneY": 54,
+      "aqiHistory": [118, 126, 134, 143, 151, 168, 232],
+      "currentAqi": 232
+    },
+    {
+      "name": "School Zone",
+      "zoneX": 18,
+      "zoneY": 62,
+      "aqiHistory": [74, 79, 83, 88, 91, 97, 104],
+      "currentAqi": 104
+    },
+    {
+      "name": "Market Colony",
+      "zoneX": 62,
+      "zoneY": 46,
+      "aqiHistory": [142, 148, 153, 166, 181, 194, 207],
+      "currentAqi": 207
+    },
+    {
+      "name": "Riverside Homes",
+      "zoneX": 30,
+      "zoneY": 28,
+      "aqiHistory": [58, 63, 61, 66, 72, 76, 82],
+      "currentAqi": 82
+    },
+    {
+      "name": "Workers Township",
+      "zoneX": 80,
+      "zoneY": 72,
+      "aqiHistory": [210, 224, 238, 251, 279, 296, 318],
+      "currentAqi": 318
+    }
+  ],
+  "industries": [
+    {
+      "name": "North Steel Works",
+      "zoneX": 67,
+      "zoneY": 30,
+      "pollutionLevel": "High",
+      "contribution": 32
+    },
+    {
+      "name": "GreenChem Processing",
+      "zoneX": 76,
+      "zoneY": 58,
+      "pollutionLevel": "Medium",
+      "contribution": 18
+    },
+    {
+      "name": "Urban Cement Plant",
+      "zoneX": 36,
+      "zoneY": 72,
+      "pollutionLevel": "High",
+      "contribution": 28
+    },
+    {
+      "name": "Lakeview Textile Mill",
+      "zoneX": 22,
+      "zoneY": 43,
+      "pollutionLevel": "Low",
+      "contribution": 8
+    },
+    {
+      "name": "Metro Power Unit",
+      "zoneX": 50,
+      "zoneY": 20,
+      "pollutionLevel": "Medium",
+      "contribution": 14
+    },
+    {
+      "name": "East Packaging Factory",
+      "zoneX": 58,
+      "zoneY": 78,
+      "pollutionLevel": "Low",
+      "contribution": 6
+    }
+  ]
+}
