@@ -472,3 +472,33 @@ button {
   color: var(--ink);
   background: #fff8e8;
 }
+
+.data-source,
+.empty-state {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.pollutant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.pollutant-chip {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.46);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.pollutant-chip b {
+  color: var(--ink);
+}

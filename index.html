@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=real-mysore-2" />
 </head>
 <body>
   <main class="shell">
@@ -16,22 +16,22 @@
       <div>
         <p class="eyebrow">Industrial Emission Monitoring System</p>
         <h1>EcoWatch AI</h1>
-        <p class="hero-copy">Monitor AQI in a fictional demo zone, inspect dummy industrial contributors, forecast risk, and flag abnormal pollution spikes.</p>
+        <p class="hero-copy">Live AQI and pollutant monitoring for Mysore localities using OpenWeather, mapped industry signals, forecast trend, anomaly alert, and compliance guidance.</p>
       </div>
       <form id="locationForm" class="search-card">
         <label for="locationInput">Location</label>
         <div class="search-row">
-          <input id="locationInput" name="location" value="Residential Area" placeholder="Try School Zone or Market Colony" list="locationOptions" />
+          <input id="locationInput" name="location" value="Mysore, Karnataka, India" placeholder="Enter a real Mysore locality" list="locationOptions" />
           <datalist id="locationOptions">
-            <option value="Residential Area"></option>
-            <option value="School Zone"></option>
-            <option value="Market Colony"></option>
-            <option value="Riverside Homes"></option>
-            <option value="Workers Township"></option>
+            <option value="Mysore, Karnataka, India"></option>
+            <option value="Hebbal Industrial Area, Mysore"></option>
+            <option value="Belavadi, Mysore"></option>
+            <option value="Nanjangud, Karnataka"></option>
+            <option value="Kuvempunagar, Mysore"></option>
           </datalist>
           <button type="submit">Analyze</button>
         </div>
-        <p class="input-hint">Use a suggested dummy location or type any custom demo-world location.</p>
+        <p class="input-hint">Dropdown loads real Mysore places from OpenStreetMap. No dummy data is shown if live APIs fail.</p>
       </form>
     </section>
 
@@ -39,7 +39,7 @@
       <article class="metric-card primary">
         <span>Current AQI</span>
         <strong id="currentAqi">--</strong>
-        <p id="aqiStatus">Loading...</p>
+        <p id="aqiStatus">Loading live data...</p>
       </article>
       <article class="metric-card">
         <span>Compliance</span>
@@ -57,8 +57,8 @@
       <article class="panel map-panel">
         <div class="panel-heading">
           <div>
-            <p class="eyebrow">Dummy World View</p>
-            <h2>Demo Zone Map</h2>
+            <p class="eyebrow">Real Map View</p>
+            <h2>Mysore Emission Map</h2>
           </div>
           <div class="legend">
             <span><i class="dot high"></i>High</span>
@@ -67,13 +67,14 @@
           </div>
         </div>
         <div id="map"></div>
+        <p id="dataSource" class="data-source">Loading source...</p>
       </article>
 
       <article class="panel">
         <div class="panel-heading compact">
           <div>
             <p class="eyebrow">Nearby Sources</p>
-            <h2>Industries</h2>
+            <h2>Mapped Industries</h2>
           </div>
         </div>
         <div id="industryList" class="industry-list"></div>
@@ -94,10 +95,11 @@
       <article class="panel recommendations-panel">
         <div class="panel-heading compact">
           <div>
-            <p class="eyebrow">Action Plan</p>
+            <p class="eyebrow">Pollutants + Action Plan</p>
             <h2>Recommendations</h2>
           </div>
         </div>
+        <div id="pollutants" class="pollutant-grid"></div>
         <ul id="recommendations"></ul>
       </article>
     </section>
@@ -105,8 +107,9 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=real-mysore-2"></script>
 </body>
 </html>
+
 
 
