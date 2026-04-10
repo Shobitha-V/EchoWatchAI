@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# EcoWatch AI - Industrial Emission Monitoring System
 
 A simple Flask + HTML/CSS/JavaScript prototype that monitors dummy industrial emissions, calculates AQI status, predicts the next AQI values, detects spikes, and visualizes the result with Leaflet and Chart.js.
@@ -159,3 +160,7 @@ This is still a dummy-world prototype. It does not use real-world locations or r
 ## Map Note
 
 The dashboard uses Leaflet again for a better interactive map feel: zoom, pan, colored markers, and popups are available. It still uses fictional `zoneX` / `zoneY` dummy-world coordinates rather than real latitude/longitude or real map tiles.
+=======
+# EchoWatchAI
+AI-based industrial emission monitoring system that analyzes AQI, detects pollution sources, predicts future air quality, and provides alerts using simulated environmental data.
+>>>>>>> 9be4cf011b0d6de4f0bda8ba7731db657407bc79
